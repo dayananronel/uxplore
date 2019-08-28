@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">UXplore</string>
+    <string name="i_d_like_to_receive_marketing_and_policy_communications_from_uxplore_and_its_partners">I\'d like to receive marketing and policy communications  from UXplore and its partners.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="show_all"><u>Show all</u></string>
+    <string name="mountanious_region_with_a_visit_expense_of_flowers_inclucing_an_area_known_as_mini_amsterdam">Mountanious region with a visit expense of flowers inclucing an area known as Mini Amsterdam.</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="pick_up_point"><u>Pick up point</u></string>
+    <string name="drop_point"><u>Drop point</u></string>
+
+
+    <string name="placesKEy"></string>
+    <string name="sign_in">Sign in</string>
+    <string name="title_activity_driver_menu">DriverMenuActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+
+
+    <string name="material_calendar_monday">M</string>
+    <string name="material_calendar_tuesday">T</string>
+    <string name="material_calendar_wednesday">W</string>
+    <string name="material_calendar_thursday">T</string>
+    <string name="material_calendar_friday">F</string>
+    <string name="material_calendar_saturday">S</string>
+    <string name="material_calendar_sunday">S</string>
+
+    <array name="material_calendar_months_array">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </array>
+
+    <string name="material_calendar_today_button">Today</string>
+    <string name="material_calendar_positive_button">OK</string>
+    <string name="material_calendar_negative_button">Cancel</string>
+    <string name="driver_register"><u>Register Driver </u></string>
+
+</resources>

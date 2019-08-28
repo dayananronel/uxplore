@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/explore_listItem_parent"
+    android:elevation="4dp"
+    android:background="#9E9E9E">
+
+    <ImageView
+        android:id="@+id/image_explore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cebu"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/tv_explore_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/image_explore"
+        android:background="#66585656"
+        android:padding="20dp"
+        android:text="Click here for more details"
+        android:textAlignment="center"
+        android:textColor="@android:color/white" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_below="@id/tv_explore_details"
+    android:background="@drawable/rounder_corners"
+    >
+
+    <TextView
+        android:id="@+id/tv_explore_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/robotomedium"
+        android:paddingTop="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="Temple of Rhum Coke"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/tv_explore_spotid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/robotomedium"
+        android:paddingLeft="17dp"
+        android:text="SPOT101"
+        android:textColor="@android:color/white"
+        />
+</LinearLayout>
+</RelativeLayout>

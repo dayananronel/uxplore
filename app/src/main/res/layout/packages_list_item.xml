@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/packages_listItem_parent"
+    android:elevation="4dp"
+    android:background="#9E9E9E">
+
+    <ImageView
+        android:id="@+id/image_package"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cebu"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/tv_package_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/image_package"
+        android:background="#66585656"
+        android:padding="20dp"
+        android:text="Click here for more details"
+        android:textAlignment="center"
+        android:textColor="@android:color/white" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/tv_package_details"
+        android:background="@drawable/rounder_corners"
+        >
+
+        <TextView
+            android:id="@+id/tv_package_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="@font/robotomedium"
+            android:padding="5dp"
+            android:text="Temple of Rhum Coke"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/tv_package_packageid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:fontFamily="@font/robotomedium"
+            android:padding="5dp"
+            android:text="ID: "
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+             />
+    </LinearLayout>
+</RelativeLayout>

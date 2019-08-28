@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B0E1DFE9">
+
+    <TextClock
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="20dp"
+        android:textSize="25sp"
+        android:textColor="@android:color/black"
+        android:format12Hour="hh:mm:ss a, MMMM/dd/yyyy"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Thank you!"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="30sp"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/robotocondensedbold"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"/>
+
+                <ImageView
+                    android:id="@+id/driver_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_margin="10dp"
+                    android:padding="5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Scott Llang"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="30sp"
+                    android:fontFamily="@font/helveticaneuecyr_light"
+                    android:textAlignment="center"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/round_border"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    android:elevation="3dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Please rate my service."
+                        android:textSize="18sp"
+                        android:textAlignment="center"/>
+
+                    <RatingBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="We would like to hear from you: "
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/robotocondensedbold"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="@font/robotobold"
+                        android:textSize="15sp"
+                        android:layout_margin="5dp"
+                        android:hint="(Optional)"/>
+
+                    <Button
+                        android:id="@+id/submit_btn_rate_driver"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/standard_button_background"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:layout_margin="20dp"
+                        android:text="Submit"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+</LinearLayout>

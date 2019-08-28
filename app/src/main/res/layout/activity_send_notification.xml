@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".driver_module.SendNotificationActivity"
+    android:background="@color/universalColor">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_sendNotifications"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+       >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           >
+            <TextView
+                android:id="@+id/toolbar_tourist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tourist"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textStyle="bold"
+                android:fontFamily="@font/robotobold"
+                android:textAllCaps="true"
+                android:textFontWeight="5dp"
+                android:textAlignment="center"
+                android:padding="15dp"
+                android:layout_margin="5dp" />
+            <ImageView
+                android:id="@+id/img_close"
+                android:layout_width="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_close_grey_700_36dp"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:id="@+id/layout_driversChecklist"
+       android:visibility="gone">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical"
+           android:visibility="visible"
+           android:layout_gravity="center_vertical">
+
+           <ImageView
+               android:id="@+id/driversChecklist_touristimg"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_margin="10dp"
+               android:padding="10dp"
+               android:src="@mipmap/ic_launcher" />
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_margin="5dp"
+               android:padding="10dp"
+               android:text="Scott Llang"
+               android:textAlignment="center"
+               android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+               android:textColor="@android:color/background_light"
+               android:textFontWeight="5dp"
+               android:textStyle="bold" />
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_margin="10dp"
+               android:background="@drawable/round_border"
+               android:elevation="@dimen/cardview_default_elevation"
+               android:orientation="vertical"
+               android:padding="5dp">
+
+               <!--<androidx.appcompat.widget.AppCompatCheckBox-->
+                   <!--android:layout_width="match_parent"-->
+                   <!--android:layout_height="wrap_content"-->
+                   <!--android:text="Temple of Leah"-->
+                   <!--android:textStyle="bold"-->
+                   <!--android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"/>-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/driversChecklist_recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="15dp"/>
+
+           </LinearLayout>
+
+           <Button
+               style="@style/TextAppearance.MaterialComponents.Button"
+               android:id="@+id/driversChecklist_doneBtn"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_margin="15dp"
+               android:background="@drawable/standard_button_background"
+               android:padding="20dp"
+               android:text="Done"
+               android:onClick="onClick"
+               android:textColor="@android:color/white"
+             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4" />
+
+       </LinearLayout>
+
+   </ScrollView>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout_sendTouristNotification">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/send_notification_tourist_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher"
+                android:layout_margin="10dp"
+                android:padding="10dp"/>
+
+            <TextView
+                android:id="@+id/send_notification_tourist_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Scott Llang"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textFontWeight="5dp"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_light"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:layout_margin="5dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:background="@drawable/round_border"
+                android:elevation="@dimen/cardview_default_elevation">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Destinations :"
+                        android:padding="15dp"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"/>
+                    <TextView
+                        android:id="@+id/send_notification_tourist_destinations"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="15dp"
+                        android:gravity="center_vertical"
+                        android:text="Sirao Garden,Temple of Leah,Simala"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Pick-up Point :"
+                        android:padding="10dp"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"/>
+                    <TextView
+                        android:id="@+id/send_notification_tourist_pickup"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="15dp"
+                        android:gravity="center_vertical"
+                        android:text="Urgello ,Cebu City"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Dropoff Point :"
+                        android:padding="10dp"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"/>
+                    <TextView
+                        android:id="@+id/send_notification_tourist_drop"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="15dp"
+                        android:gravity="center_vertical"
+                        android:text="Talisay, Cebu City"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </LinearLayout>
+            <Button
+                android:id="@+id/send_notification_tourist_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Send Pick-up Arrival Notification"
+                style="@style/TextAppearance.MaterialComponents.Button"
+                android:background="@drawable/standard_button_background"
+                android:textColor="@android:color/white"
+                android:layout_margin="15dp"
+                android:padding="20dp"
+                android:onClick="onClick"
+                android:textSize="16sp"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

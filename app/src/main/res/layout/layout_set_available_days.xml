@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".driver_module.DriverSetAvailableDaysActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:padding="10dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Set Available Days"
+                android:textAlignment="center"
+                android:padding="20dp"
+                android:layout_margin="10dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                />
+
+            <com.applandeo.materialcalendarview.CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:type="many_days_picker"
+                app:todayLabelColor="@color/universalColor"
+                android:layout_margin="5dp"/>
+
+
+            <Button
+                android:id="@+id/setDaysBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Set Days"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:textColor="@android:color/white"
+                android:background="@drawable/standard_button_background"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

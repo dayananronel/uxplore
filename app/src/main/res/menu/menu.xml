@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="Explore"
+        android:icon="@drawable/ic_explore_blue_500_24dp"
+        android:id="@+id/menu_explore"
+        app:showAsAction="always"
+        />
+    <item
+        android:title="Packages"
+        android:icon="@drawable/ic_shop_blue_500_24dp"
+        android:id="@+id/menu_packages"
+        app:showAsAction="always"
+        />
+    <item
+        android:title="Bookings"
+        android:icon="@drawable/ic_view_list_blue_500_24dp"
+        android:id="@+id/menu_bookings"
+        app:showAsAction="always"
+        />
+    <item
+        android:title="Account"
+        android:icon="@drawable/ic_account_circle_blue_500_24dp"
+        android:id="@+id/menu_account"
+        app:showAsAction="always"
+        />
+
+</menu>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".driver_module.RegisterDriverActivity"
+    android:background="@color/universalColor">
+
+    <include
+        android:id="@+id/layout"
+        layout="@layout/toolbar_layout_driver"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+
+    <LinearLayout
+        android:layout_below="@id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/register_parent"
+        android:layout_margin="10dp"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:textSize="30sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_margin="2dp"
+            android:padding="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp">
+
+            <!--<EditText-->
+                <!--android:id="@+id/register_firstName"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@drawable/edittext_default_background"-->
+                <!--android:hint="First name"-->
+                <!--android:padding="15dp"-->
+                <!--android:inputType="text"-->
+                <!--android:layout_margin="10dp"/>-->
+            <!--<EditText-->
+                <!--android:id="@+id/register_lastName"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@drawable/edittext_default_background"-->
+                <!--android:hint="Last name"-->
+                <!--android:inputType="text"-->
+                <!--android:padding="15dp"-->
+                <!--android:layout_margin="10dp"/>-->
+            <EditText
+                android:id="@+id/register_contactNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_default_background"
+                android:hint="Mobile No."
+                android:padding="15dp"
+                android:inputType="number"
+                android:maxLength="11"
+                android:layout_margin="10dp"/>
+            <EditText
+                android:id="@+id/register_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_default_background"
+                android:hint="Email Address"
+                android:padding="15dp"
+                android:inputType="textEmailAddress"
+                android:layout_margin="10dp"/>
+            <!--<EditText-->
+                <!--android:id="@+id/register_currentAddress"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@drawable/edittext_default_background"-->
+                <!--android:hint="Current Address"-->
+                <!--android:padding="15dp"-->
+                <!--android:inputType="text"-->
+                <!--android:layout_margin="10dp"/>-->
+            <!--<EditText-->
+                <!--android:id="@+id/register_username"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@drawable/edittext_default_background"-->
+                <!--android:hint="Username"-->
+                <!--android:inputType="text"-->
+                <!--android:padding="15dp"-->
+                <!--android:layout_margin="10dp"/>-->
+            <EditText
+                android:id="@+id/register_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_default_background"
+                android:hint="Password"
+                android:padding="15dp"
+                android:inputType="textPassword"
+                android:layout_margin="10dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignBottom="@id/register_parent"
+        android:layout_margin="10dp"
+        android:padding="10dp">
+        <Button
+            android:id="@+id/register_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="Proceed"
+            android:background="@drawable/standard_button_background"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/robotoregular"
+            android:textSize="18sp"
+            />
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.BookingsFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="350dp"
+                   android:orientation="vertical"
+                   android:id="@+id/fragmentMapLayout">
+                   <fragment
+                       android:id="@+id/frg"
+                       android:name="com.google.android.gms.maps.SupportMapFragment"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent" />
+
+                   <EditText
+                       android:id="@+id/searchBookings"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_alignTop="@id/frg"
+                       android:layout_margin="15dp"
+                       android:imeOptions="actionSearch"
+                       android:inputType="text"
+                       android:singleLine="true"
+                       android:drawableStart="@drawable/ic_search_white_24dp"
+                       android:hint="Search"
+                       android:textColorHint="@android:color/white"/>
+               </RelativeLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="vertical"
+                   android:layout_margin="10dp"
+                   android:background="@android:color/white"
+                   >
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical">
+
+                       <TextView
+                           android:id="@+id/tv_pickupPoint"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:drawableStart="@drawable/indicator"
+                           android:padding="5dp"
+                           style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                           android:text="@string/pick_up_point"
+                           android:textAlignment="textStart"
+                           android:textSize="16sp" />
+                       <TextView
+                           android:id="@+id/tv_bookings_pickuppoint"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:textSize="18sp"
+                           android:layout_marginStart="20dp"
+                           android:paddingLeft="20dp"
+                           android:textColor="@android:color/black"
+                           />
+                   </LinearLayout>
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical"
+                       android:layout_marginBottom="10dp">
+
+                       <TextView
+                           android:id="@+id/tv_dropPoint"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:drawableStart="@drawable/indicatordest"
+                           android:padding="5dp"
+                           android:text="@string/drop_point"
+                           style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                          android:textAlignment="textStart"
+                           android:textSize="16sp" />
+                       <TextView
+                           android:id="@+id/tv_bookings_droppoint"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:textSize="18sp"
+                           android:layout_marginStart="20dp"
+                           android:paddingLeft="20dp"
+                           android:textColor="@android:color/black"
+                           />
+                   </LinearLayout>
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:id="@+id/booking_destinations_layout">
+
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Chosen Destinations/Package:"
+                          />
+                       <TextView
+                      android:id="@+id/booking_tvChosenDestinations"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text=""
+                      android:padding="10dp"
+                      android:textSize="15sp"
+                      android:textStyle="bold"
+                      />
+                  </LinearLayout>
+
+                   <Button
+                       android:id="@+id/booking_btn_destinations"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:drawableStart="@drawable/ic_explore_blue_500_24dp"
+                       android:text="Destinations"
+                       android:padding="15dp"
+                       android:gravity="center_vertical"
+                       android:textAlignment="viewStart"
+                       android:layout_marginTop="10dp"
+                       android:layout_marginBottom="10dp"
+                       android:visibility="gone"
+                       tools:ignore="RtlCompat" />
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:gravity="center_vertical"
+                   android:padding="5dp"
+                   android:paddingTop="15dp"
+                   android:background="@android:color/white">
+
+                   <LinearLayout
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical"
+                       android:padding="5dp"
+                       android:layout_marginLeft="5dp"
+                       android:layout_marginRight="5dp">
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:textColor="@color/colorPrimaryDark"
+                           android:text="No. of days"
+                           android:layout_margin="2dp"/>
+                       <TextView
+                           android:id="@+id/book_noOfdays"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:padding="5dp"
+                           android:textColor="@android:color/black"
+                           android:background="@drawable/booking_selection_background"/>
+                   </LinearLayout>
+                   <LinearLayout
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical"
+                       android:padding="5dp"
+                       android:layout_marginLeft="5dp"
+                       android:layout_marginRight="5dp">
+                       <TextView
+
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:textColor="@color/colorPrimaryDark"
+                           android:textAlignment="center"
+                           android:text="Date Started"/>
+
+                       <Button
+                           android:id="@+id/booking_dateStart"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                            android:text="Select Date"
+                           android:padding="2dp"
+                           style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored" />
+                   </LinearLayout>
+                   <LinearLayout
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical"
+                       android:layout_marginLeft="5dp"
+                       android:layout_marginRight="5dp"
+                       android:padding="5dp">
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:textColor="@color/colorPrimaryDark"
+                           android:textAlignment="center"
+                           android:text="Date Ended"/>
+                       <Button
+                           android:id="@+id/booking_dateEnd"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:text="Select Date"
+                           android:padding="2dp"
+                           style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+                           />
+                   </LinearLayout>
+                   <LinearLayout
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical"
+                       android:padding="5dp"
+                       android:layout_gravity="center">
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:textColor="@color/colorPrimaryDark"
+                           android:textAlignment="center"
+                           android:text="Arrival"/>
+                       <Button
+                           android:id="@+id/booking_timeArrive"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:text="Select Time"
+                           android:padding="2dp"
+                           style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+                           />
+                   </LinearLayout>
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_margin="10dp"
+                   android:background="@android:color/white">
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="Ride Services"
+                       android:textColor="@android:color/black"
+                       android:textSize="16sp"
+                       android:padding="5dp"/>
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal"
+                       android:gravity="center_horizontal">
+
+                      <LinearLayout
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:id="@+id/layout_van">
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:text="Van"
+                              android:textAlignment="center"
+                              android:textSize="16sp"
+                              android:textColor="@android:color/black"
+                              />
+                          <ImageButton
+                              android:id="@+id/booking_ride_van"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:src="@drawable/ic_local_shipping_black_48dp"/>
+                      </LinearLayout>
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical"
+                           android:id="@+id/layout_bus">
+                           <TextView
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:text="Bus"
+                               android:textAlignment="center"
+                               android:textSize="16sp"
+                               android:textColor="@android:color/black"
+                               />
+                           <ImageButton
+                               android:id="@+id/booking_ride_bus"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:src="@drawable/ic_directions_bus_black_48dp"/>
+                       </LinearLayout>
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical"
+                           android:id="@+id/layout_car">
+                           <TextView
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:text="Car"
+                               android:textAlignment="center"
+                               android:textSize="16sp"
+                               android:textColor="@android:color/black"
+                               />
+                           <ImageButton
+                               android:id="@+id/booking_ride_car"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:src="@drawable/ic_directions_car_black_48dp"/>
+                       </LinearLayout>
+
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical"
+                       android:layout_margin="10dp"
+                       android:background="@android:color/white">
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="horizontal"
+                           android:gravity="center_horizontal"
+                          >
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Estimated Fare:"
+                               android:textAlignment="center"
+                               android:textSize="20sp"
+                               android:padding="10dp"
+                               android:gravity="center_vertical"
+                               android:drawableStart="@drawable/ic_monetization_on_grey_600_36dp"
+                               android:fontFamily="@font/helveticaneuecyr_medium"
+                               android:textColor="@android:color/black"
+                               />
+
+                           <TextView
+                               android:id="@+id/booking_estimatedfare"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:fontFamily="@font/helveticaneuecyr_medium"
+                               android:padding="10dp"
+                               android:text="2000"
+                               android:textAlignment="center"
+                               android:textColor="@android:color/black"
+                               android:textSize="20sp" />
+                       </LinearLayout>
+                        <Button
+                            android:id="@+id/booking_proceed_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#009EFF"
+                            android:text="Proceed"
+                            android:onClick="onClick"
+                            android:layout_margin="10dp"
+                            android:textSize="18sp"
+                            android:textColor="@android:color/white"
+                            android:fontFamily="@font/helveticaneuecyr_bold"/>
+                   </LinearLayout>
+               </LinearLayout>
+           </LinearLayout>
+
+   </ScrollView>
+        </RelativeLayout>
+</FrameLayout>

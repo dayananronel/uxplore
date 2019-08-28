@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B0E1DFE9"
+    android:padding="20dp">
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Your Driver is here!"
+               android:textColor="@android:color/background_dark"
+               android:textSize="30sp"
+               android:textAlignment="center"
+               android:fontFamily="@font/robotocondensedbold"
+               android:padding="10dp"
+               android:layout_margin="10dp"/>
+
+           <ImageView
+               android:id="@+id/driver_photo"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:src="@mipmap/ic_launcher"
+               android:layout_margin="10dp"
+               android:padding="5dp"/>
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Scott Llang"
+               android:textColor="@android:color/background_dark"
+               android:textSize="30sp"
+               android:fontFamily="@font/helveticaneuecyr_light"
+               android:textAlignment="center"
+               android:padding="10dp"
+               android:layout_margin="10dp"/>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:gravity="center"
+               android:background="@drawable/round_border"
+               android:padding="10dp"
+               android:layout_margin="10dp"
+               android:elevation="3dp">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:gravity="center_horizontal">
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Plate #: "
+                       android:textColor="@android:color/black"
+                       android:textSize="30sp"/>
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="AA12345"
+                       android:textColor="@android:color/black"
+                       android:textSize="30sp"/>
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:gravity="center_horizontal">
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Car Type: "
+                       android:textColor="@android:color/black"
+                       android:textSize="30sp"/>
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Toyota Vios"
+                       android:textColor="@android:color/black"
+                       android:textSize="30sp"/>
+               </LinearLayout>
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:gravity="center_horizontal"
+               android:padding="10dp">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Total Fare: "
+                   android:gravity="center_vertical"
+                   android:fontFamily="@font/robotocondensedbold"
+                   android:textColor="@android:color/black"
+                   android:textSize="35sp"/>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="P 500.00"
+                   android:gravity="center_vertical"
+                   android:textColor="@android:color/black"
+                   android:fontFamily="@font/robotobold"
+                   android:textSize="35sp"/>
+           </LinearLayout>
+
+           <Button
+               android:id="@+id/okay_btn_arrive_driver"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="@drawable/standard_button_background"
+               android:textColor="@android:color/white"
+               android:textSize="18sp"
+               android:layout_margin="20dp"
+               android:text="Okay"/>
+       </LinearLayout>
+   </ScrollView>
+
+</LinearLayout>

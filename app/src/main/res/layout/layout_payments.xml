@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_border"
+    android:layout_margin="10dp"
+    android:padding="20dp"
+    >
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radio_cash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cash"
+            android:drawableEnd="@drawable/ic_monetization_on_black_24dp"
+            android:drawablePadding="6dp"/>
+        <RadioButton
+            android:id="@+id/radio_paypal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Paypal"
+            android:drawableEnd="@drawable/paypal"
+            android:drawablePadding="6dp"/>
+
+    </RadioGroup>
+</LinearLayout>
